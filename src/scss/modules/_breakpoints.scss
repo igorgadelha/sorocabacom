@@ -260,14 +260,15 @@
     .main-call {
       border-bottom: 5px solid $gray;
       h2 {
-        font-size: 3em;
+        font-size: 2em;
         img {
-          margin-top:20px;
+          margin-top:0px;
+          width: 150px;
         }
       }
       p {
         width: 50vw;
-        font-size: 2em;
+        font-size: 1.4em;
       }
     }
 

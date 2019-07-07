@@ -1,17 +1,369 @@
 @media only screen and (min-width:320px) {
+  .header {
+    a.navbar-brand {
+      display: block;
+      width: 100%;
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 150px;
+        height: auto;
+      }
+    }
+  }
 
+  .main {
+
+    .main-call {
+      padding-top: 10vh;
+      background-size: cover;
+      background-position: center center;
+      background-origin: border-box;
+      h2 {
+        padding: 20px 10px;
+        font-size: 1.4em;
+        line-height: 1.3;
+        text-align: center;
+
+        img {
+          max-width: 90px;
+          height: auto;
+          display: block;
+          // float:left;
+          margin: 0 auto;
+          margin-bottom: 10px;
+        }
+        span {
+          font-weight: lighter;
+        }
+      }
+      p {
+        text-align: justify;
+        font-size: 1.2em;
+        font-weight: lighter;
+        line-height: 1.5em;
+        padding: 10px;
+      }
+    }
+    .products {
+        .product {
+          padding: 0;
+          img {
+            max-height: 350px;
+            width: auto;
+            display: block;
+            margin: 15px auto;
+            padding: 20px;
+          }
+
+          .content {
+            margin:0;
+            padding: 30px 15px;
+
+            &.bg-primary-darken {
+              background-color: rgba(darken($primary, 10%), 0.7);
+            }
+            &.bg-secondary-darken {
+              background-color: rgba(darken($secondary, 10%), 0.7);
+            }
+            &.bg-gray-darken {
+              background-color: rgba(darken($gray, 10%), 0.7);
+            }
+
+            h2, p{
+              text-align: center;
+              font-weight: lighter;
+            }
+            h2 {
+              text-transform: uppercase;
+              line-height: 1.3em;
+              font-size: 1.4em;
+            }
+            p {
+              line-height: 1.4em;
+            }
+
+          }
+        }
+      }
+
+      .confort-repair {
+        .box {
+          margin: 15px;
+          padding: 40px 20px;
+          border-radius: 15px;
+          background-size: contain;
+          img {
+            max-width: 40vw;
+            margin: 5% auto;
+          }
+          h4, p {
+            font-weight: lighter;
+            font-size: 1.2em;
+            line-height: 1.4em;
+            text-align: left;
+          }
+           ul {
+             li {
+               padding: 5px;
+
+             }
+           }
+        }
+      }
+      .last-call {
+        background-color: $primary;
+        img {
+          display: block;
+          margin: 0 auto;
+          max-width: 50vw;
+          margin-top: 10%;
+        }
+        h4, p {
+          color: white;
+          font-weight: lighter;
+          text-align: justify;
+          font-size: 1em;
+          line-height: 1.4em;
+        }
+        h4 {
+          text-align: center;
+          font-size: 1.2em;
+          margin: 15px auto;
+        }
+      }
+    }
+  .footer {
+    text-align: center;
+    img {
+      display: none;
+    }
+  }
 }
+
 @media only screen and (min-width:480px) {
+  .main {
+
+    .products {
+      .product {
+        display: flex;
+        width: 100%;
+
+      }
+    }
+    .confort-repair {
+      padding: 15px;
+      .box {
+        background-size: contain;
+        margin: inherit;
+        img {
+          max-width: 130px;
+        }
+      }
+    }
+  }
 
 }
 @media only screen and (min-width:768px) {
+  .header {
+    a.navbar-brand {
+      display: inline-block;
+      width: inherit;
+      img {
+        margin: inherit;
+        max-width: 150px;
+        height: auto;
+      }
+    }
+  }
 
+  .main {
+
+    .main-call {
+      h2 {
+        text-align: left;
+        text-overflow: clip;
+        font-size: 2em;
+        font-weight: lighter;
+        img {
+          float:left;
+          width: auto;
+          height: auto;
+          max-width: 120px;
+        }
+        b {
+          display: block;
+        }
+        span {
+          display: block;
+        }
+      }
+      p {
+        width: 60vw;
+      }
+    }
+    .products {
+      .product {
+        &.bg-primary {
+          @include linearGradient(darken($primary, 20%),lighten($primary, 30%));
+        }
+        &.bg-secondary {
+          @include linearGradient(darken($secondary, 20%),lighten($secondary, 30%));
+        }
+        &.bg-gray {
+          @include linearGradient(darken($gray, 20%), lighten($gray, 30%) );
+        }
+
+        display: block;
+        width: auto;
+        img {
+          min-width: 100%;
+          max-height: 100%;
+        }
+        .content {
+          min-height: 235px;
+        }
+
+      }
+    }
+
+    .last-call {
+      background-color: #0C5288;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100%;
+      h4, p {
+        color: white;
+        text-align: left;
+      }
+      .container {
+        .row {
+          div {
+            img {
+              max-width: 200px;
+              .img-ass {
+                float: right;
+                padding: 0;
+                margin: 0;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
 }
 @media only screen and (min-width:1024px) {
 
-}
-@media only screen and (min-width:1140px) {
+  .main {
+    .main-call {
+      border-bottom: 5px solid $gray;
+      h2 {
+        font-size: 3em;
+        img {
+          margin-top:20px;
+        }
+      }
+      p {
+        width: 50vw;
+        font-size: 2em;
+      }
+    }
 
+    .products {
+      .product {
+        // height: fill-available;
+        img {
+          position: relative;
+          top: -100px;
+        }
+        .content {
+          padding: 40px;
+          min-height: 270px;
+          position: relative;
+          // top: -100px;
+          h2 {
+            margin-bottom: 10%;
+            text-align: left;
+          }
+          p {
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    .confort-repair {
+      min-height: 900px;
+      .box {
+        margin-left: 60%;
+        margin-top:15%;
+        padding: 60px 40px;
+        p {
+          font-size: 1em;
+        }
+      }
+    }
+
+    .last-call {
+      background-color: #0C5288;
+      background-image: url('../../assets/img/footer-background.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100%;
+      .container {
+        .row {
+          padding: 115px;
+          p, h4 {
+            color: $primary;
+          }
+          img.img-ass {
+            position: absolute;
+            display: block;
+            right: -380%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width:1140px) {
+  .main {
+    .confort-repair {
+      .box {
+        margin-left: 70%;
+      }
+    }
+
+    .last-call {
+      background-color: #0C5288;
+      min-height: 550px;
+      .container {
+        .row {
+          padding: 230px 15px;
+          p, h4 {
+            color: $primary;
+            font-size: 1.4em;
+          }
+          img.img-ass {
+            position: absolute;
+            display: block;
+            right: -300%;
+            max-width: 280px;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    text-align: left;
+    img {
+      display: block;
+    }
+  }
 }
 @media only screen and (min-width:1280px) {
 
